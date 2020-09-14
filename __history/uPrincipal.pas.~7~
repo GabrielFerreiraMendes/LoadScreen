@@ -1,0 +1,69 @@
+unit uPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, uLoadScreen;
+
+type
+  TfrmPrincipal = class(TForm)
+    pnl: TPanel;
+    btnLoad: TButton;
+    procedure btnLoadClick(Sender: TObject);
+  private
+    procedure inWait(); overload;
+    procedure inWait(pSleepTime: Integer); overload;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+{ TfrmMetodosAnonimos }
+
+procedure TfrmPrincipal.btnLoadClick(Sender: TObject);
+var
+ vFrm: TfrmLoadScreen;
+begin
+  Application.CreateForm(TfrmLoadScreen, vFrm);
+
+  try
+   vFrm.myParameterizedProcedure := Self.inWait;
+   vFrm.myIntegerParameter := 10000;
+   vFrm.ShowModal;
+  finally
+   FreeAndNil(vFrm);
+  end;
+end;
+
+procedure TfrmPrincipal.inWait();
+var
+ vIndex: Integer;
+begin
+  vIndex := 0;
+
+  while vIndex < 1000000 do
+   inc(vIndex);
+end;
+
+procedure TfrmPrincipal.inWait(pSleepTime: Integer);
+var
+ vIndex: Integer;
+begin
+  vIndex := 0;
+
+  while vIndex < 1000000 do
+   begin
+    sleep(pSleepTime);
+    inc(vIndex);
+   end;
+end;
+
+end.

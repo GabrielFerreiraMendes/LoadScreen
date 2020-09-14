@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/03/18 15:46:43.000.719,=C:\Users\gabriel.mendes\Documents\Embarcadero\Studio\Projects\GroupedItems1.pas</Transaction>
+    <Transaction>2019/03/18 15:46:43.000.829,=C:\Users\gabriel.mendes\Documents\Embarcadero\Studio\Projects\ItemDetail1.pas</Transaction>
+    <Transaction>2020/09/09 12:40:58.000.087,=C:\Users\gabriel.mendes\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/09/09 12:41:30.000.369,C:\Users\gabriel.mendes\Documents\Embarcadero\Studio\Projects\uMetdosAnonimos.pas=C:\Users\gabriel.mendes\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/09/09 12:41:30.000.369,C:\Users\gabriel.mendes\Documents\Embarcadero\Studio\Projects\uMetdosAnonimos.dfm=C:\Users\gabriel.mendes\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020/09/09 12:43:32.000.568,C:\Users\gabriel.mendes\Documents\Embarcadero\Studio\Projects\uMetdosAnonimos.pas=</Transaction>
+    <Transaction>2020/09/09 12:43:35.000.965,=C:\Users\gabriel.mendes\Documents\Embarcadero\Studio\Projects\uMetdosAnonimos.pas</Transaction>
+    <Transaction>2020/09/09 12:43:51.000.708,C:\Users\gabriel.mendes\Documents\Embarcadero\Studio\Projects\uMetdosAnonimos.pas=</Transaction>
+    <Transaction>2020/09/09 12:44:13.000.031,=C:\Users\gabriel.mendes\Documents\Metodos Anonimos\uAnonymousMethod.pas</Transaction>
+    <Transaction>2020/09/09 12:44:22.000.958,C:\Users\gabriel.mendes\Documents\Metodos Anonimos\Project.dproj=C:\Users\gabriel.mendes\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2020/09/09 12:45:19.000.697,=C:\Users\gabriel.mendes\Documents\Metodos Anonimos\Unit1.pas</Transaction>
+    <Transaction>2020/09/09 12:49:30.000.955,C:\Users\gabriel.mendes\Documents\Metodos Anonimos\uLoadScreen.pas=C:\Users\gabriel.mendes\Documents\Metodos Anonimos\Unit1.pas</Transaction>
+    <Transaction>2020/09/09 12:49:30.000.955,C:\Users\gabriel.mendes\Documents\Metodos Anonimos\uLoadScreen.dfm=C:\Users\gabriel.mendes\Documents\Metodos Anonimos\Unit1.dfm</Transaction>
+    <Transaction>2020/09/14 15:36:38.000.086,C:\Users\gabriel.mendes\Documents\Metodos Anonimos\uAnonymousMethod.pas=</Transaction>
+    <Transaction>2020/09/14 15:36:58.000.835,=C:\Users\gabriel.mendes\Documents\Metodos Anonimos\uPrincipal.pas</Transaction>
+    <Transaction>2020/09/14 15:38:08.719,C:\Users\gabriel.mendes\Documents\Metodos Anonimos\uLoadScreen.pas=</Transaction>
+    <Transaction>2020/09/14 15:38:13.317,=C:\Users\gabriel.mendes\Documents\Metodos Anonimos\uLoadScreen.pas</Transaction>
+  </Transactions>
+</BorlandProject>

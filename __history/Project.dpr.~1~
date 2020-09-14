@@ -1,0 +1,14 @@
+program Project;
+
+uses
+  Vcl.Forms,
+  uAnonymousMethod in 'uAnonymousMethod.pas' {frmMetodosAnonimos};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmMetodosAnonimos, frmMetodosAnonimos);
+  Application.Run;
+end.

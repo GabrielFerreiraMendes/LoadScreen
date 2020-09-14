@@ -1,0 +1,15 @@
+program Project;
+
+uses
+  Vcl.Forms,
+  uLoadScreen in 'uLoadScreen.pas' {frmLoadScreen},
+  uPrincipal in 'uPrincipal.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmLoadScreen, frmLoadScreen);
+  Application.Run;
+end.

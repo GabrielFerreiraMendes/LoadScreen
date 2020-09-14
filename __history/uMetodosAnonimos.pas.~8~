@@ -1,0 +1,36 @@
+unit uMetodosAnonimos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls;
+
+type
+  TfrmMetodosAnonimos = class(TForm)
+    pnl: TPanel;
+  private
+    procedure emEspera(var pExibicao: Integer);
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMetodosAnonimos: TfrmMetodosAnonimos;
+
+implementation
+
+{$R *.dfm}
+
+{ TfrmMetodosAnonimos }
+
+procedure TfrmMetodosAnonimos.emEspera(var pExibicao: Integer);
+begin
+  while pExibicao < 1000000 do
+   begin
+
+   end;
+end;
+
+end

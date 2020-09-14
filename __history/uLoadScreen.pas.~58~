@@ -1,0 +1,77 @@
+unit uLoadScreen;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, JvExControls, JvAnimatedImage, JvGIFCtrl,
+  System.Threading, Vcl.ExtCtrls;
+
+type
+
+ TSimpleProcedure = reference to procedure;
+ TParameterizedProcedure = reference to procedure(pInteger: Integer);
+
+  TfrmLoadScreen = class(TForm)
+    AnimatedImage: TJvGIFAnimator;
+    tParallel: TTimer;
+    procedure FormShow(Sender: TObject);
+    procedure tParallelTimer(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    FmyPocedure: TSimpleProcedure;
+    FmyParameterizedProcedure: TParameterizedProcedure;
+    FmyIntegerParameter: Integer;
+    myTask: ITask;
+    { Private declarations }
+  public
+    property myPocedure: TSimpleProcedure read FMyPocedure write FMyPocedure;
+    property myParameterizedProcedure: TParameterizedProcedure read FmyParameterizedProcedure write FmyParameterizedProcedure;
+    property myIntegerParameter: Integer read FmyIntegerParameter write FmyIntegerParameter;
+    { Public declarations }
+  end;
+
+var
+  frmLoadScreen: TfrmLoadScreen;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmLoadScreen.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  AnimatedImage.Animate := False;
+  tParallel.Enabled     := True;
+  FreeAndNil(myTask);
+end;
+
+procedure TfrmLoadScreen.FormShow(Sender: TObject);
+begin
+
+  if Assigned(Self.myParameterizedProcedure) then
+   begin
+    myTask := TTask.Create(procedure
+                            begin
+                             Self.myParameterizedProcedure(myIntegerParameter);
+                            end);
+    myTask.Start;
+
+    tParallel.Enabled := True;
+   end;
+
+
+  AnimatedImage.Animate := True;
+  myPocedure();
+  Self.CloseModal;
+end;
+
+procedure TfrmLoadScreen.tParallelTimer(Sender: TObject);
+begin
+  if Assigned(myTask) then
+   begin
+    if myTask.Status = TTaskStatus.Completed then
+     Self.Close;
+   end;
+end;
+
+end.
